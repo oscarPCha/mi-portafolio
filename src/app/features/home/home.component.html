@@ -1,0 +1,90 @@
+<app-header></app-header>
+<main class="pt-36">
+  <span class="glow"></span>
+  <section class="flex flex-col text-center m-auto gap-6 max-w-3xl py-16">
+    <h1 class="font-serif text-5xl text-[#c2c6da] font-bold">
+      Oscar A. Panta Chapoñan
+    </h1>
+    <h2 class="font-serif text-4xl text-[#fdfa29] font-bold">
+      Desarrollador FullStack
+    </h2>
+    <p class="font-setif text-xl text-[#c2c6da] px-24 text-balance leading-8">
+      Encantado de aprender nuevas tendencias en el ámbito tecnológico y aplicar
+      soluciones en determinados lugares
+    </p>
+  </section>
+  <!-- Sección: Sobre mí -->
+  <app-about></app-about>
+
+  <!-- Sección: Experiencia -->
+  <app-experience></app-experience>
+
+  <!-- Sección: Proyectos -->
+  <section id="proyectos" class="py-16 max-w-5xl m-auto relative">
+    <span class="glow-proyectos"></span>
+    <h2 class="text-4xl font-bold mb-10 text-center">Proyectos</h2>
+    <div class="grid grid-cols-2 gap-3">
+      <app-project
+        [title]="'Conservación Naturaleza'"
+        [images]="[
+          'assets/proyectos/conservacion1.png',
+          'assets/proyectos/conservacion2.png',
+          'assets/proyectos/conservacion3.png'
+        ]"
+        [technologies]="['Angular', 'Material Angular', 'Node.js', 'MySQL']"
+        [description]="
+          'Plataforma web para la conservación de la naturalez con la biodiversidad más rica del planeta.'
+        "
+        [urlGit]="'https://github.com/'"
+        [urlWeb]="'https://github.com/'"
+      ></app-project>
+      <app-project
+        [title]="'Migrago '"
+        [images]="[
+          'assets/proyectos/migrago1.png',
+          'assets/proyectos/migrago2.png',
+          'assets/proyectos/migrago3.png'
+        ]"
+        [technologies]="['Angular', 'Bootstrap', 'Codeigniter', 'PostgreSQL']"
+        [description]="
+          'Web para gestionar personas migrantes y guías especializados para un excelente viaje al extranjero. Interfaz moderna, panel de administración completo y base de datos relacional.'
+        "
+        [urlGit]="'https://github.com/'"
+        [urlWeb]="'https://github.com/'"
+      ></app-project>
+       <app-project
+        [title]="'Prueba Técnica Rimac'"
+        [images]="[
+          'assets/proyectos/rimac1.png',
+          'assets/proyectos/rimac2.png',
+          'assets/proyectos/rimac3.png'
+        ]"
+        [technologies]="['React', 'Bootstrap', 'PostgreSQL']"
+        [description]="
+          'Prueba técnica enfocado en usar una api opensource aplicando los requerimientos deseados en el desarrollo de la plataforma'
+        "
+        [urlGit]="'https://github.com/'"
+        [urlWeb]="'https://github.com/'"
+      ></app-project>
+             <app-project
+        [title]="'Chat Mensajeria'"
+        [images]="[
+          'assets/proyectos/chat1.png',
+          'assets/proyectos/chat2.png',
+          'assets/proyectos/chat3.png'
+        ]"
+        [technologies]="['React', 'Bootstrap', 'Graphql', 'Nodejs']"
+        [description]="
+          'Proyecto enfocado en un chat en tiempo real con el envío de mensajeria instantánea'
+        "
+        [urlGit]="'https://github.com/'"
+        [urlWeb]="'https://github.com/'"
+      ></app-project>
+    </div>
+  </section>
+  <!-- Seccion:Habilidades -->
+  <app-skills></app-skills>
+
+  <!-- Sección: Contacto -->
+</main>
+<app-footer></app-footer>

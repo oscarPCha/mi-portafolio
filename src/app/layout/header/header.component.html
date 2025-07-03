@@ -1,0 +1,82 @@
+<header
+  class="fixed top-0 left-0 right-0 shadow z-50 border-b-2 border-b-[rgba(194,198,218,.4)] backdrop-blur-md"
+>
+  <div
+    class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16"
+  >
+    <!-- Logo -->
+    <img
+      src="/assets/Logo_Oscar_Panta.png"
+      alt=""
+      class="w-[115px] h-[100px]"
+    />
+
+    <!-- Botón hamburguesa (solo visible en móvil) -->
+    <button
+      class="lg:hidden text-gray-700 focus:outline-none"
+      (click)="toggleMenu()"
+      aria-label="Menú"
+    >
+      <svg
+        class="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"
+        />
+      </svg>
+    </button>
+
+    <!-- Menú (versión escritorio) -->
+    <nav class="hidden lg:flex space-x-6 text-gray-700 font-medium">
+      <a
+        href="#sobre-mi"
+        class="hover:text-blue-600 hover:underline transition text-white"
+        >Sobre mí</a
+      >
+       <a
+        href="#experiencia"
+        class="hover:text-blue-600 hover:underline transition text-white"
+        >Experiencia</a
+      >
+      <a
+        href="#proyectos"
+        class="hover:text-blue-600 hover:underline transition text-white"
+        >Proyectos</a
+      >
+      <a
+        href="#habilidades"
+        class="hover:text-blue-600 hover:underline transition text-white"
+        >Habilidades</a
+      >
+    </nav>
+  </div>
+
+  <!-- Menú desplegable (versión móvil) -->
+  <div *ngIf="isMenuOpen" class="lg:hidden px-4 pb-4 space-y-2 bg-white shadow">
+    <a
+      href="#sobre-mi"
+      (click)="closeMenu()"
+      class="block text-gray-700 hover:text-blue-600"
+      >Sobre mí</a
+    >
+    <a
+      href="#proyectos"
+      (click)="closeMenu()"
+      class="block text-gray-700 hover:text-blue-600"
+      >Proyectos</a
+    >
+    <a
+      href="#contacto"
+      (click)="closeMenu()"
+      class="block text-gray-700 hover:text-blue-600"
+      >Contacto</a
+    >
+  </div>
+</header>

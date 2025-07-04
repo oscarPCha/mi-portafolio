@@ -1,5 +1,5 @@
 <div
-  class="relative animated-border-dot bg-[rgba(255,255,255,0.05)] border border-amber-100 transition duration-600 hover:border-amber-600 p-6 rounded-2xl text-white col-span-1"
+  class="h-full relative animated-border-dot bg-[rgba(255,255,255,0.05)] border border-amber-100 transition duration-600 hover:border-amber-600 p-6 rounded-2xl text-white col-span-1"
 >
   <span class="text-[#fdfa29] flex justify-center text-2xl m-auto mb-5">{{
     title
@@ -43,7 +43,7 @@
     {{ description }}
   </p>
   <div class="grid grid-cols-2 gap-2 mt-4">
-    <a target="_blank" [href]="urlWeb" class="bg-amber-200 border-2 rounded-full  px-3 py-2 text-black font-semibold flex items-center justify-center gap-2 hover:scale-103 hover:bg-amber-300 transition duration-600"
+    <a [target]= "urlWeb ? '_blank' : '_self'" [href]="urlWeb" class="bg-amber-200 border-2 rounded-full  px-3 py-2 text-black font-semibold flex items-center justify-center gap-2 hover:scale-103 hover:bg-amber-300 transition duration-600"
       >Sitio Web
       <svg
         viewBox="0 0 1024 1024"
